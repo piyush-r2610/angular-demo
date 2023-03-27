@@ -1,0 +1,136 @@
+
+/* topnav css  */
+.topnav {
+    width: 100%;
+    position: fixed;
+    top:0;
+    left: 0;
+    overflow: hidden;
+    background-color: white;
+    border-bottom: 1px solid rgb(128, 128, 128);
+    z-index: 10;
+}
+img{
+    float: left;
+    width: 50px;
+
+}
+.topnav a {
+    justify-content: space-between;
+    float: left;
+    /* text-align: center; */
+    font-size: 17px;
+    /* font-weight: bold; */
+    padding: 14px 16px;
+    color: red;
+}
+
+.menu {
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #000;
+    display: block;
+}
+/* topnav css  */
+
+/* left sidebar nav  */
+
+.sidebar {
+    position: fixed;
+    top: 55px;
+    overflow: auto;
+    background-color: black;
+    height: 100%;
+    border-right: 1px solid rgb(128, 128, 128);
+    padding: 30px 5px;
+    margin: 0px;
+    /* width: 240px; */
+
+    /* size: 100px; */
+}
+.sidebar a:hover {
+    /* background-color:white; */
+    color: green;
+    border-radius: 10px;
+  }
+.sidebar a {
+    text-decoration: none;
+    padding: 10px 10px;
+    color: white;
+    /* text-align: center; */
+    display: block;
+    /* font-weight: 100; */
+}
+
+.sidebar i {
+    padding-right: 5px;
+    font-size:30px;
+}
+
+.sidebar .icon {
+    float: right;
+}
+
+.sidebar li{
+    font-size: medium;
+}
+
+.dropdow-container{
+    padding-left: 10px;
+    overflow-y: hidden;
+    max-height: 0px;
+    transition: all .15s ease;
+}
+
+.dropdow-container.show{
+    max-height: 1000px;
+    transition: all .15 ease;
+}
+ul{
+    padding: 0px;
+    /* border:1px solid #000 ; */
+}
+ul>li>a.active{
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+
+}
+
+/* left sidebar nav  */
+
+/* main-content */
+.main-content {
+
+    margin-left:150px;
+    
+    padding: 10px 10px;
+    transition: margin-left .3s;
+}
+/* main-content */
+
+
+
+@media screen and (max-width:800px) {
+
+    .menu 
+    {
+        display: block;
+    }
+    .sidebar{
+        display: none;
+        width: 155px;
+    }
+    .sidebar a{
+        padding: 10px 0px;
+        text-align: center;
+    }
+    
+    .main-content{
+        margin-left: 0px;
+    }
+
+}

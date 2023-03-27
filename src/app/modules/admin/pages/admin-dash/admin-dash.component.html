@@ -1,0 +1,32 @@
+<div class="topnav shadow p-1">
+    <img src="https://media.glassdoor.com/sqll/2474996/sumago-infotech-squarelogo-1584356763691.png"  alt="">
+    <a routerLink="" style="text-decoration: none;">Sumago Infotech</a>
+    <span class="menu" (click)="openNav(false)"><i class="bi bi-list"></i></span>
+</div>
+<!-- topnavbar -->
+
+<!-- left sidebar nav  -->
+
+<div  class="sidebar shadow p-2"  id="sidebar"  [ngStyle]="responsiveMenu">
+    <ul>
+        <li ><a routerLink="/admin/dashboard" routerLinkActive="active" ><i class="bi bi-speedometer2"></i> <b [hidden]="hideanchor == true">Dashboard</b>  </a></li>
+        <li><a routerLink="/admin/reports" routerLinkActive="active"><i class="bi bi-card-text"></i> <b [hidden]="hideanchor == true">Reports</b></a></li>
+        <!-- <li>
+            <a routerLink=""><i class="bi bi-bag"></i> Products <i class="bi bi-arrow-right icon"></i></a>
+            <ul class="dropdow-container">
+                <li><a href="#">Link1</a></li>
+                <li><a href="#">Link2</a></li>
+            </ul> -->
+        <!-- </li> -->
+
+        <li><a routerLink="/admin/userdetail" routerLinkActive="active"><i class="bi bi-person-gear"></i> <b  [hidden]="hideanchor == true">User Details</b> </a></li>
+        <li><a routerLink="/admin/users" routerLinkActive="active"><i class="bi bi-person-gear"></i> <b  [hidden]="hideanchor == true">User</b></a></li>
+        
+        <li><a href="#"><i class="bi bi-box-arrow-left"></i> <b [hidden]="hideanchor == true">Logout</b></a></li>
+
+    </ul>
+</div>
+
+<div class="main-content" [ngStyle]="responsiveContent">
+    <router-outlet></router-outlet>
+</div>

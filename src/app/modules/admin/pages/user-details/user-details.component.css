@@ -1,0 +1,30 @@
+.full-width{
+    width: 100%;
+}
+
+.top-padding{
+    padding-top: 1px;
+}
+
+.margin-left mat-radio-button:not(:first-child){
+    margin-left:10px;
+}
+
+.form-container{
+    margin-left: 40px;
+    margin-top: 100px;
+    z-index: 0;
+    box-shadow: 10px solid black;
+    -moz-box-shadow:0px 4px 20px rgba(5,57,94,.5);
+    -webkit-box-shadow:0px 4px 20px rgba(5,57,94,.5);
+    /* margin: left 10px;  */
+}
+@media screen and (max-width: 800px) {
+    .form-container{
+       /* display: block; */
+       /* padding-top: 100px; */
+       margin-top: 100px;
+       /* align-items: center; */
+       /* height: 100px; */
+    } 
+}
