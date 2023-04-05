@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "http-tutorial-cc0df": {
+      "hosting": {
+        "admindashboard": [
+          "http-tutorial-cc0df"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "http-tutorial-cc0df"
+  }
+}

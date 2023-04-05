@@ -1,0 +1,154 @@
+
+    <div class="card" >
+        <main>
+    <form [formGroup]="employeeForm" >
+        <h1>Add Employee Details</h1>
+
+        <br>
+
+
+        <div class="row">
+
+            <div class="col-xs-3">
+                <input type="text" class="form-control" placeholder="First Name" formControlName="firstname"  >
+            </div>
+
+            <div class="col-xs-3">
+                <input type="text" class="form-control" placeholder="Last Name" formControlName="lastname"  >
+            </div>
+            </div>
+            
+    
+
+        <div class="row mt-3">
+
+            <div class="col employee">
+
+                
+                <h2 class="text-secondary fst-italic form-heading" style="margin-left: 20px;">Employee Details</h2>
+              
+            </div>
+            <br>
+        </div>
+
+        <div class="row mt-3">
+
+            <div class="col-xs-3">
+
+                <label for="datepicker" class="form-label">Birthdate</label>
+
+                <input type="date" class="form-control" id="datepicker" formControlName="birthday">
+
+            </div>
+
+
+            <div class="row mt-3">
+
+                <div class="col">
+
+                    <label class="form-label" style="margin-left: 20px;"  >Gender :</label>&nbsp;
+
+
+
+                    <div class="form-check form-check-inline">
+
+                        <input class="form-check-input" type="radio"  id="male" value="m" formControlName="gender" >
+
+                        <label class="form-check-label" for="male">Male</label>
+
+                    </div>
+
+
+                    <div class="form-check form-check-inline">
+
+                        <input class="form-check-input" type="radio"  id="female" value="f" formControlName="gender" >
+
+                        <label class="form-check-label" for="female">Female</label>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="row mt-2">
+
+            <div class="col-xs-4">
+
+                <select class="form-select" style="height: 100%;" formControlName="education" >
+
+                    <option value="default" selected>Select your Education</option>
+
+                    <option *ngFor="let option of educationOptions;let i = index" value="{{i}}">{{option | titlecase}}
+                    </option>
+
+                </select>
+
+            </div>
+        </div>
+
+
+        
+
+        <div class="row mt-2">
+
+            <div class="col-xs-4">
+
+                <h2 class="text-secondary fst-italic form-heading" style="margin-left: 20px;" >Job Details</h2>
+
+            </div>
+
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-xs-4">
+
+                <input type="text" class="form-control" placeholder="company name" formControlName="company">
+
+            </div>
+
+        </div>
+
+
+        <div class="row mt-3">
+
+            <div class="col-xs-4">
+                <label for="profile" class="form-label">Profile Picture</label>
+                <input type="file" class="form-control" id="profile"  #fileInput>
+            </div>
+
+        </div>
+
+        <div class="row mt-3">
+
+            <div class="col-xs-4">
+
+                <input type="number" class="form-control" placeholder="Job Experience (Years)" formControlName="jobExperience">
+
+            </div>
+
+            <div class="col-xs-4">
+
+                <input type="number" class="form-control" placeholder="Salary (LPA)" formControlName="salary" >
+
+            </div>
+
+
+        </div>
+
+    <div class="row mt-4">
+        <div class="col-xs-4">
+            <button class="btn btn-primary" (click)="updateData() " style="width: 25%;margin-left: 20px;" >Update</button>
+        </div>
+      
+    </div>
+
+    </form>
+</main>
+    </div>
+

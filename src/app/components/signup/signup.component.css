@@ -1,0 +1,26 @@
+.example-full-width{
+    width: 100%;
+}
+
+mat-card{
+    width: 90%;
+    display: flex;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 10px;
+    border: 1px solid black;
+    box-shadow: 0px 4px 20px rgba(5,57,94,.5);
+    -moz-box-shadow:0px 4px 20px rgba(5,57,94,.5);
+    -webkit-box-shadow:0px 4px 20px rgba(5,57,94,.5);
+
+}
+
+@media (max-width: 800px){
+
+    mat-card{
+        width: 100%;
+        display: block;
+        margin-left: 0px;
+    }
+}

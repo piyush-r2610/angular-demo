@@ -1,0 +1,200 @@
+
+<main>
+
+
+<h1 style="align-items: center ;">Dynamic List Demo</h1>
+
+
+
+    <div class="toolbar">
+
+        <div class="add-emloyee">
+            <button type="button" class="btn btn-success btn-md" routerLink="/admin/userdetail">Add Employee</button>
+        </div>
+
+        <div class="search-employee">
+            <input type="search" class="form-control search" placeholder="Search Employee" (input)="searchEmployees(searchInput.value)" #searchInput >
+        </div>
+
+    </div>
+    
+    <div class="row mt-1 employeedet"  *ngFor="let employee of employeesToDisplay;let ei = index;" >
+
+        <div class="col text-center " >
+
+            <span class="text-secondary fs-1 fm-bold fst-italic"></span>
+
+            <div class="row mt-5" >
+
+                    <div class="row g-0">
+
+                            <div class="col-md-4 d-flex justify-content-center align-items-center ">
+
+                                <img src="../../../../../assets/Images/keanu.jpg" alt="Profile Photo here" srcset="">
+
+                            </div>
+
+          <div class="col ps-2">
+
+                      <div class="row g-0">
+
+                         <div class="col-md-5 text-center" >
+
+                             <span class="name">{{employee.firstname | titlecase}} {{employee.lastname | titlecase}} </span>
+
+                                    </div>
+
+                          <div class="col-md-7 d-flex justify-content-center align-items-center">
+
+                                        <div class="btn-group" role="group">
+
+                                       <button type="button" class="btn btg "
+
+                                                routerLink="/admin/edet-add/{{employee.id}}" >Edit</button> &nbsp;
+
+                                      <button type="button" class="btn btf"
+
+                                                (click)="deleteEmployee(employee.id)">Delete</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="row g-0 mt-2 tbh">
+
+                                    <div class="col-md-5">
+
+                                        <table  class="table table-hover mx-auto" >
+
+                                            <thead class="text-center fs-2 fst-italic "  >
+                                                <tr>
+
+                                                    <td colspan="2">
+
+                                                       <b>Personal Details</b>  
+
+                                                    </td>
+
+                                                </tr>
+
+                                            </thead>
+
+                                            <tbody>
+
+                                                <tr>
+
+                                                    <td>
+                                                       Birthdate
+                                                    </td>
+
+                                                    <td>
+                                                        {{employee.birthdate|date}}
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                    <td>
+                                                       Gender
+                                                    </td>
+
+                                                    <td>
+                                                        {{employee.gender  == 'm' ? "Male" : "Female"}}
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+
+                                                    <td>
+                                                      Education
+                                                    </td>
+
+                                                    <td>
+                                                        {{employee.education}}
+                                                    </td>
+                                                </tr>
+
+                                            </tbody>
+
+                                        </table>
+
+                                    </div>
+
+                                    <div class="col">
+
+                                            <table class="table table-hover mx-auto" >
+                                                
+                                            <thead class="text-center fs-2 fst-italic " >
+                                                <tr>
+
+                                                    <td colspan="2">
+
+                                                        <b>Job Details</b>  
+
+                                                    </td>
+
+                                                </tr>
+
+                                            </thead>
+
+                                            <tbody>
+
+                                                <tr>
+
+                                                    <td>
+                                                       Company
+                                                    </td>
+
+                                                    <td>
+                                                        {{employee.company}}
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                    <td>
+                                                       Job Experience
+                                                    </td>
+
+                                                    <td>
+                                                        {{employee.jobExperience}}
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                    <td>
+                                                       Salary
+                                                    </td>
+
+                                                    <td>
+                                                        {{employee.salary}}
+                                                    </td>
+
+                                                </tr>
+
+       
+                                            </tbody>
+                                        
+                                        </table>
+                                    
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    
+<h1 class="btq" *ngIf="employees.length == 0">There are No Employees</h1>
+</main>

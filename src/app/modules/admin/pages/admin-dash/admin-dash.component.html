@@ -1,0 +1,57 @@
+<div class="topnav shadow p-1">
+
+    <!-- <img src=""  alt="Chaudhari Yatra"> -->
+
+    <a routerLink="" style="text-decoration: none;"><b>Demo Company name</b></a>
+
+    <span class="menu" (click)="openNav(false)"><i class="bi bi-list"></i></span>
+
+</div>
+<!-- topnavbar -->
+
+<!-- left sidebar nav  -->
+
+<div class="sidebar shadow p-2" id="sidebar" [ngStyle]="responsiveMenu">
+
+    <ul>
+
+        <li><a routerLink="/admin/home" routerLinkActive="active"><i class="bi bi-speedometer2"></i> <b
+                    [hidden]="hideanchor == true">Dashboard</b> </a></li>
+
+        <li><a routerLink="/admin/reports" routerLinkActive="active"><i class="bi bi-card-text"></i> <b
+                    [hidden]="hideanchor == true">Reports</b></a></li>
+
+        <!-- <li>
+            <a routerLink=""><i class="bi bi-bag"></i> Products <i class="bi bi-arrow-right icon"></i></a>
+
+            <ul class="dropdow-container">
+
+                <li><a href="#">Link1</a></li>
+
+                <li><a href="#">Link2</a></li>
+
+            </ul> -->
+
+        <!-- </li> -->
+
+        <li><a routerLink="/admin/userdetail" routerLinkActive="active"><i class="bi-person-plus"></i> <b
+                    [hidden]="hideanchor == true">User Details</b> </a></li>
+
+        <li><a routerLink="/admin/users" routerLinkActive="active"><i class="bi-card-list"></i> <b
+                    [hidden]="hideanchor == true">User</b></a></li>
+        
+
+        <li><a routerLink="/admin/edetails" routerLinkActive="active"><i class="bi-person"></i><b
+                    [hidden]="hideanchor == true">Employee Details</b></a></li>    
+    
+        <li (click)="logout()"><a href="#"><i class="bi bi-box-arrow-left"></i> <b [hidden]="hideanchor == true">Logout</b></a></li>
+
+    </ul>
+
+</div>
+
+<div class="main-content" [ngStyle]="responsiveContent">
+
+    <router-outlet></router-outlet>
+
+</div>

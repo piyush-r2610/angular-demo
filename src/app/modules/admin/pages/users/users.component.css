@@ -1,0 +1,45 @@
+.header{
+    display: flex;
+    color: black;
+    align-items: center;
+    justify-content: center;
+ 
+}
+
+table{
+
+    box-shadow: 0px 4px 20px rgba(5,57,94,.5);
+    -moz-box-shadow:0px 4px 20px rgba(5,57,94,.5);
+    -webkit-box-shadow:0px 4px 20px rgba(5,57,94,.5);
+    font-size: large;
+    /* align-items: center; */
+    width: 90%;
+    /* justify-items: center; */
+}
+
+
+
+
+@media screen and (max-width : 767px){
+    table thead{display: none;}
+    table{box-shadow :none;}
+    table tbody{padding: 0 16px;}
+    table tbody, table tbody tr{display:block; width:100% ;}
+    table tbody tr th::before, table tbody tr td::before{content: attr(data-title); display :block;font-weight: 600;font-size: 12px;color: rgba(5,57,94,.5);}
+    table tbody tr td {display: block;width:50%;float: left;color: black;}
+    table tbody tr th {display: block;width:50%;float: left;font-size: 16px;color: rgba(5,57,94,.5);font-weight: 700;}
+    table tbody tr{margin-bottom: 16px ;float:left;clear: both; box-shadow: 0px 4px 20px rgba(5,57,94,.5);  -moz-box-shadow:0px 4px 20px rgba(5,57,94,.5);
+        -webkit-box-shadow:0px 4px 20px rgba(5,57,94,.5);};
+
+
+    
+}
+
+
+@media screen and (min-width:800px){
+    table{
+        /* margin-top: 20px; */
+        margin-left: 50px;
+        
+    }
+}
