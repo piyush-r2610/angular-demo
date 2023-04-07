@@ -44,8 +44,8 @@ export class AdminDashComponent implements OnInit {
         // 'text-align': 'center'
       }
       this.responsiveContent={
-        'margin-left':'60px',
-        'margin-top':'100px'
+        'margin-left':'30px',
+        'margin-top':'60px'
       }
       this.defaultStatus = true;
       this.hideanchor = true;
@@ -59,7 +59,7 @@ export class AdminDashComponent implements OnInit {
       }
       this.responsiveContent={
         'margin-left':'',
-        'margin-top':'100px'
+        'margin-top':'60px'
       }
       this.defaultStatus=false;
       this.hideanchor = false;

@@ -1,107 +1,108 @@
 <form [formGroup]="employeeForm" class="form-container">
 
-    <mat-card>
-     
-     
+  <mat-card>
+
+
+    <mat-card-header>
+      <mat-card-title><b>Profile Information</b></mat-card-title>&nbsp;&nbsp;&nbsp;
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col-md-6">
+          <mat-form-field class="full-width">
+            <input formControlName="firstname" matInput placeholder="First name" required>
+            <mat-error *ngIf="FirstName?.errors?.['required']">
+              Field Empty
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-md-6">
+          <mat-form-field class="full-width">
+            <input formControlName="lastname" matInput placeholder="Last name">
+            <mat-error *ngIf="LastName?.errors?.['required']">
+              Field Empty
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <mat-form-field appearance="fill">
+            <mat-label>Eduacation</mat-label>
+            <select matNativeControl required formControlName="education">
+              <option *ngFor="let option of educationOptions;let i = index" value="{{i}}">{{option | titlecase}}
+              </option>
+            </select>
+            <mat-error *ngIf="Education?.errors?.['required']">
+              Field Empty
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-md-6 top-padding">
+          <mat-form-field class="full-width" appearance="fill">
+            <mat-label hidden>Select DOB</mat-label>
+            <input formControlName="birthday" matInput [matDatepicker]="picker" placeholder="Date of birth">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error *ngIf="BirthDay?.errors?.['required']">
+              Field Empty
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <mat-radio-group class="margin-left" formControlName="gender">
+            <mat-radio-button value="male" id="male" value="m"> Male </mat-radio-button>
+            <mat-radio-button value="female" id="female" value="f"> Female </mat-radio-button>
+            <mat-error *ngIf="Gender?.errors?.['required']">
+              Field Empty
+            </mat-error>
+          </mat-radio-group>
+        </div>
+      </div>
       <mat-card-header>
-        <mat-card-title><b>Profile Information</b></mat-card-title>&nbsp;&nbsp;&nbsp;
+        <mat-card-title><b>Job Information</b></mat-card-title>&nbsp;&nbsp;&nbsp;
       </mat-card-header>
-      <mat-card-content>
-        <div class="row">
-          <div class="col-md-6">
-            <mat-form-field class="full-width">
-              <input formControlName="firstname" matInput placeholder="First name" required >
-              <mat-error *ngIf="FirstName?.errors?.['required']">
-                Field Empty
-              </mat-error>
-            </mat-form-field>
-          </div>
-          <div class="col-md-6">
-            <mat-form-field class="full-width">
-              <input  formControlName="lastname" matInput placeholder="Last name">
-              <mat-error *ngIf="LastName?.errors?.['required']">
-                Field Empty
-              </mat-error>
-            </mat-form-field>
-          </div>
+      <div class="row">
+        <div class="col-md-6">
+          <mat-form-field class="full-width">
+            <input formControlName="company" matInput placeholder="Company">
+            <mat-error *ngIf="Company?.errors?.['required']">
+              Field Empty
+            </mat-error>
+          </mat-form-field>
         </div>
-        <div class="row">
-          <div class="col-sm-6">
-            <mat-form-field appearance="fill">
-              <mat-label>Eduacation</mat-label>
-              <select matNativeControl required formControlName="education" >
-                <option *ngFor="let option of educationOptions;let i = index" value="{{i}}">{{option | titlecase}}</option>
-              </select>
-              <mat-error *ngIf="Education?.errors?.['required']">
-                Field Empty
-              </mat-error>
-            </mat-form-field>
-          </div>
-          <div class="col-md-6 top-padding">
-                <mat-form-field class="full-width" appearance="fill">
-                    <mat-label hidden>Select DOB</mat-label>
-                    <input  formControlName="birthday" matInput [matDatepicker]="picker" placeholder="Date of birth">
-                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                    <mat-datepicker #picker></mat-datepicker>
-                    <mat-error *ngIf="BirthDay?.errors?.['required']">
-                      Field Empty
-                    </mat-error>
-                </mat-form-field>                  
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <mat-radio-group   class="margin-left" formControlName="gender" >
-                    <mat-radio-button value="male"   id="male" value="m" > Male </mat-radio-button>
-                    <mat-radio-button value="female"  id="female" value="f" > Female </mat-radio-button>
-                    <mat-error *ngIf="Gender?.errors?.['required']">
-                      Field Empty
-                    </mat-error>
-                </mat-radio-group>
-            </div>
-        </div>
-        <mat-card-header>
-          <mat-card-title><b>Job Information</b></mat-card-title>&nbsp;&nbsp;&nbsp;
-        </mat-card-header>
-        <div class="row">
-          <div class="col-md-6">
-            <mat-form-field class="full-width">
-              <input formControlName="company" matInput placeholder="Company" >
-              <mat-error *ngIf="Company?.errors?.['required']">
-                Field Empty
-              </mat-error>
-            </mat-form-field>
-          </div>
-          <div class="col-md-6">
+        <div class="col-md-6">
 
-           
-            
-              <ngx-mat-file-input #fileInput type="file"></ngx-mat-file-input>
-         
 
-          </div>
+
+          <ngx-mat-file-input #fileInput type="file"></ngx-mat-file-input>
+
+
         </div>
-        <div class="row">
-          <div class="col-md-6">
-            <mat-form-field class="full-width">
-              <input formControlName="salary" type="number" matInput placeholder="Salary" >
-              <mat-error *ngIf="Salary?.errors?.['required']">
-                Field Empty
-              </mat-error>
-            </mat-form-field>
-          </div>
-          <div class="col-md-6">
-            <mat-form-field class="full-width">
-              <input  formControlName="jobExperience" type="number" matInput placeholder="Job Experience">  
-                 <mat-error *ngIf="JobExperience?.errors?.['required']">
-                Field Empty
-              </mat-error>
-            </mat-form-field>
-          </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <mat-form-field class="full-width">
+            <input formControlName="salary" type="number" matInput placeholder="Salary">
+            <mat-error *ngIf="Salary?.errors?.['required']">
+              Field Empty
+            </mat-error>
+          </mat-form-field>
         </div>
-      </mat-card-content>
-      <mat-card-actions>
-        <button (click)=" addEmployee()" [disabled]="employeeForm.invalid" mat-raised-button color="primary">Save</button>
-      </mat-card-actions>
-    </mat-card>
-  </form> 
+        <div class="col-md-6">
+          <mat-form-field class="full-width">
+            <input formControlName="jobExperience" type="number" matInput placeholder="Job Experience">
+            <mat-error *ngIf="JobExperience?.errors?.['required']">
+              Field Empty
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button (click)=" addEmployee()" [disabled]="employeeForm.invalid" mat-raised-button color="primary">Save</button>
+    </mat-card-actions>
+  </mat-card>
+</form>

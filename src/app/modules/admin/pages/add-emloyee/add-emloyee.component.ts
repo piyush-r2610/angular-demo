@@ -63,7 +63,7 @@ export class AddEmloyeeComponent implements OnInit {
         lastname: this.fb.control(res['lastname' as keyof typeof res] )?.value,
         birthday: this.fb.control(res['birthdate' as keyof typeof res] )?.value,
         gender: this.fb.control(res['gender' as keyof typeof res] )?.value,
-        education: this.fb.control(res['birthday' as keyof typeof res] )?.value,
+        education: this.fb.control(res['education' as keyof typeof res] )?.value,
         company: this.fb.control(res['company' as keyof typeof res] )?.value,
         jobExperience: this.fb.control(res['jobExperience' as keyof typeof res] )?.value,
         salary: this.fb.control(res['salary' as keyof typeof res] )?.value,
@@ -108,11 +108,21 @@ export class AddEmloyeeComponent implements OnInit {
 
   updateData(){
 
-    this.employeeService.updateEmployee(this.route.snapshot.params['id'],this.employeeForm.value).subscribe(
-      (res) => {
-        console.log(res,"data updated");
+    this.employeeService.getEmployeeData(this.route.snapshot.params['id']).subscribe((res?)=>{
+      if(res) {
+        this.employeeForm = this.fb.group({
+          firstname: this.fb.control(res['firstname' as keyof typeof res] )?.value,
+          lastname: this.fb.control(res['lastname' as keyof typeof res] )?.value,
+          birthday: this.fb.control(res['birthday' as keyof typeof res] )?.value,
+          gender: this.fb.control(res['gender' as keyof typeof res] )?.value,
+          education: this.fb.control(res['education' as keyof typeof res] )?.value,
+          company: this.fb.control(res['company' as keyof typeof res] )?.value,
+          jobExperience: this.fb.control(res['jobExperience' as keyof typeof res] )?.value,
+          salary: this.fb.control(res['salary' as keyof typeof res] )?.value,
+    
+        });
       }
-    )
+    })
     
   }
 

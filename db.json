@@ -1,5 +1,28 @@
 {
-  "posts": [],
+  "posts": [
+    {
+      "firstname": "demo",
+      "lastname": "demo",
+      "birthdate": "2023-04-11T18:30:00.000Z",
+      "gender": "f",
+      "education": "HSC",
+      "company": "demo",
+      "jobExperience": 0,
+      "salary": 0,
+      "id": 1
+    },
+    {
+      "firstname": "Piyush",
+      "lastname": "Rajendra",
+      "birthday": "2023-04-16",
+      "gender": "m",
+      "education": "4",
+      "company": "demo",
+      "jobExperience": 0,
+      "salary": 0,
+      "id": 2
+    }
+  ],
   "comments": [],
   "profile": {
     "name": "typicode"

@@ -11,8 +11,8 @@
     z-index: 10;
 }
 img{
-    float: left;
-    width: 50px;
+    /* float: left; */
+    width: 150px;
 
 }
 .topnav a {
@@ -40,7 +40,7 @@ img{
 
 .sidebar {
     position: fixed;
-    top: 55px;
+    top: 56px;
     overflow: auto;
     background-color: black;
     height: 100%;
@@ -106,9 +106,10 @@ ul>li>a.active{
 .main-content {
 
     margin-left:160px;
-    
+    height: 100%;
     padding: 10px 10px;
     transition: margin-left .3s;
+    /* background-image: url("); */
 }
 /* main-content */
 
