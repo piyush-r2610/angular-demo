@@ -12,14 +12,14 @@
       "id": 1
     },
     {
-      "firstname": "Piyush",
-      "lastname": "Rajendra",
-      "birthday": "2023-04-16",
+      "firstname": "zebra",
+      "lastname": "don",
+      "birthdate": "2023-04-18T18:30:00.000Z",
       "gender": "m",
-      "education": "4",
-      "company": "demo",
+      "education": "Post Graduate",
+      "company": "apple",
       "jobExperience": 0,
-      "salary": 0,
+      "salary": 29,
       "id": 2
     }
   ],

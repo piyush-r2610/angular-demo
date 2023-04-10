@@ -3,10 +3,7 @@ import { Component,OnInit } from '@angular/core';
 import { EmpServiceService } from 'app/services/emp-service.service';
 import { Employee } from '../add-emloyee/employee.model';
 import { ActivatedRoute } from '@angular/router';
-import { MatDialog } from '@angular/material/dialog';
-import { AddUpdateComponent } from '../add-update/add-update.component';
-import { NgZone} from '@angular/core'
-import {MAT_DIALOG_DATA} from '@angular/material/dialog';
+
 
 @Component({
   selector: 'app-users',
@@ -15,9 +12,9 @@ import {MAT_DIALOG_DATA} from '@angular/material/dialog';
 })
 export class UsersComponent implements OnInit {
   employees:Employee[];
-  employeesToDisplay:Employee[];
+  employeesToDisplay:Employee[];  
 
-  constructor(private http:HttpClient,private zone: NgZone,private _dialog: MatDialog, private employeeService:EmpServiceService, private route:ActivatedRoute){
+  constructor(private http:HttpClient, private employeeService:EmpServiceService, private route:ActivatedRoute){
 
       this.employees=[];
       this.employeesToDisplay=this.employees;
@@ -52,6 +49,4 @@ export class UsersComponent implements OnInit {
       this.employeesToDisplay=filterEmployees;
     }
   }  
-
-
 }

@@ -7,7 +7,6 @@ import { EmployeeDetailsComponent } from './pages/employee-details/employee-deta
 import { ReportsComponent } from './pages/reports/reports.component';
 import { UserDetailsComponent } from './pages/user-details/user-details.component';
 import { UsersComponent } from './pages/users/users.component';
-import { AddUpdateComponent } from './pages/add-update/add-update.component';
 
 const routes: Routes = [
 { path: '',component:AdminDashComponent,children:[
@@ -17,7 +16,6 @@ const routes: Routes = [
   { path: 'users',component:UsersComponent },
   { path: 'edetails',component:EmployeeDetailsComponent },
   { path: 'edet-add',component:AddEmloyeeComponent },
-  { path: 'add',component:AddUpdateComponent },
   { path: 'edet-add/:id',component:AddEmloyeeComponent },
   { path:'' ,redirectTo:'/admin/home',pathMatch:'full'}
 ] },

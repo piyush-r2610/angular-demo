@@ -11,16 +11,14 @@
     z-index: 10;
 }
 img{
-    /* float: left; */
+
     width: 150px;
 
 }
 .topnav a {
     justify-content: space-between;
     float: left;
-    /* text-align: center; */
     font-size: 17px;
-    /* font-weight: bold; */
     padding: 14px 16px;
     color: red;
 }
@@ -47,12 +45,10 @@ img{
     border-right: 1px solid rgb(128, 128, 128);
     padding: 30px 5px;
     margin: 0px;
-    /* width: 240px; */
-
-    /* size: 100px; */
+ 
 }
 .sidebar a:hover {
-    /* background-color:white; */
+
     color: green;
     border-radius: 10px;
   }
@@ -60,9 +56,9 @@ img{
     text-decoration: none;
     padding: 10px 10px;
     color: white;
-    /* text-align: center; */
+  
     display: block;
-    /* font-weight: 100; */
+
 }
 
 .sidebar i {
@@ -91,7 +87,7 @@ img{
 }
 ul{
     padding: 0px;
-    /* border:1px solid #000 ; */
+
 }
 ul>li>a.active{
     color: green;

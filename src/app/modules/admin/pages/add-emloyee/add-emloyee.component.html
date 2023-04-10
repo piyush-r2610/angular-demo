@@ -1,154 +1,77 @@
-
-    <div class="card" >
-        <main>
-    <form [formGroup]="employeeForm" >
-        <h1>Add Employee Details</h1>
-
-        <br>
-
-
-        <div class="row">
-
-            <div class="col-xs-3">
-                <input type="text" class="form-control" placeholder="First Name" formControlName="firstname"  >
-            </div>
-
-            <div class="col-xs-3">
-                <input type="text" class="form-control" placeholder="Last Name" formControlName="lastname"  >
-            </div>
-            </div>
-            
-    
-
-        <div class="row mt-3">
-
-            <div class="col employee">
-
-                
-                <h2 class="text-secondary fst-italic form-heading" style="margin-left: 20px;">Employee Details</h2>
-              
-            </div>
-            <br>
+<div class="card text-center">
+    <div class="card-header">
+        <h1>Update Record</h1>
+    </div>
+    <div class="card-body">
+        <div class="card-title">
+            <mat-card-header>
+                <mat-card-title><b>Personal Information</b></mat-card-title>&nbsp;&nbsp;&nbsp;
+            </mat-card-header>
         </div>
-
-        <div class="row mt-3">
-
-            <div class="col-xs-3">
-
-                <label for="datepicker" class="form-label">Birthdate</label>
-
-                <input type="date" class="form-control" id="datepicker" formControlName="birthday">
-
-            </div>
-
-
-            <div class="row mt-3">
-
+        <form [formGroup]="employeeForm">
+            <div class="form-row">
                 <div class="col">
-
-                    <label class="form-label" style="margin-left: 20px;"  >Gender :</label>&nbsp;
-
-
-
-                    <div class="form-check form-check-inline">
-
-                        <input class="form-check-input" type="radio"  id="male" value="m" formControlName="gender" >
-
-                        <label class="form-check-label" for="male">Male</label>
-
-                    </div>
-
-
-                    <div class="form-check form-check-inline">
-
-                        <input class="form-check-input" type="radio"  id="female" value="f" formControlName="gender" >
-
-                        <label class="form-check-label" for="female">Female</label>
-
-                    </div>
-
+                    <input type="text" class="form-control" placeholder="First name" formControlName="firstname">
                 </div>
-
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Last name" formControlName="lastname" >
+                </div>
             </div>
+        </form>
+        <div class="form-row">
+            <div class="col">
+                <mat-form-field appearance="fill" style="width: 400px;">
+                    <mat-label>Eduacation</mat-label>
+                    <select matNativeControl required formControlName="education">
+                      <option *ngFor="let option of educationOptions;let i = index" value="{{i}}">{{option | titlecase}}
+                      </option>
+                    </select>
+                    <mat-error *ngIf="Education?.errors?.['required']">
+                      Field Empty
+                    </mat-error>
+                  </mat-form-field>
+            </div>
+            <div class="col">
+                <mat-form-field class="full-width" style="background-color: white;" style="width: 400px;" >
+                    <mat-label>Select DOB</mat-label>
+                    <input formControlName="birthday" matInput [matDatepicker]="picker" placeholder="Date of birth">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col">
+                <mat-radio-group formControlName="gender">
+                    <mat-radio-button value="male" id="male" value="m"> Male </mat-radio-button>
+                    <mat-radio-button value="female" id="female" value="f"> Female </mat-radio-button>
+                    <mat-error *ngIf="Gender?.errors?.['required']">
+                        Field Empty
+                    </mat-error>
+                </mat-radio-group>
+            </div>
+        </div>
+        <mat-card-header>
+            <mat-card-title><b>Job Information</b></mat-card-title>&nbsp;&nbsp;&nbsp;
+        </mat-card-header>
 
-
+        <div class="form-row">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Company Name" type="number" formControlName="company" >
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col"> 
+                <input type="text" class="form-control"  placeholder="Salary (LPA)" type="number" formControlName="salary" >
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Job Experience (Months)" formControlName="jobExperience" >
+    
+            </div>
         </div>
 
-        <div class="row mt-2">
-
-            <div class="col-xs-4">
-
-                <select class="form-select" style="height: 100%;" formControlName="education" >
-
-                    <option value="default" selected>Select your Education</option>
-
-                    <option *ngFor="let option of educationOptions;let i = index" value="{{i}}">{{option | titlecase}}
-                    </option>
-
-                </select>
-
-            </div>
+        <div class="btn-group">
+            <a routerLink="" class="btn btn-success">Update</a> &nbsp;&nbsp;&nbsp;
+            <a routerLink="" class="btn btn-danger">Cancel</a>
         </div>
 
-
-        
-
-        <div class="row mt-2">
-
-            <div class="col-xs-4">
-
-                <h2 class="text-secondary fst-italic form-heading" style="margin-left: 20px;" >Job Details</h2>
-
-            </div>
-
-
-        </div>
-
-        <div class="row">
-
-            <div class="col-xs-4">
-
-                <input type="text" class="form-control" placeholder="company name" formControlName="company">
-
-            </div>
-
-        </div>
-
-
-        <div class="row mt-3">
-
-            <div class="col-xs-4">
-                <label for="profile" class="form-label">Profile Picture</label>
-                <input type="file" class="form-control" id="profile"  #fileInput>
-            </div>
-
-        </div>
-
-        <div class="row mt-3">
-
-            <div class="col-xs-4">
-
-                <input type="number" class="form-control" placeholder="Job Experience (Years)" formControlName="jobExperience">
-
-            </div>
-
-            <div class="col-xs-4">
-
-                <input type="number" class="form-control" placeholder="Salary (LPA)" formControlName="salary" >
-
-            </div>
-
-
-        </div>
-
-    <div class="row mt-4">
-        <div class="col-xs-4">
-            <button class="btn btn-primary" (click)="updateData() " style="width: 25%;margin-left: 20px;" >Update</button>
-        </div>
-      
     </div>
-
-    </form>
-</main>
-    </div>
-
+</div>

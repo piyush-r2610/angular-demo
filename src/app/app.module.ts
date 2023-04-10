@@ -45,7 +45,7 @@ import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { EmployeeDetailsComponent } from './modules/admin/pages/employee-details/employee-details.component';
 import { AddEmloyeeComponent } from './modules/admin/pages/add-emloyee/add-emloyee.component';
-import { AddUpdateComponent } from './modules/admin/pages/add-update/add-update.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,7 +58,7 @@ import { AddUpdateComponent } from './modules/admin/pages/add-update/add-update.
     DashboardComponent,
     EmployeeDetailsComponent,
     AddEmloyeeComponent,
-    AddUpdateComponent,
+
 
   ],
   imports: [

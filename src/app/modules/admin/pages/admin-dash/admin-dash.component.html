@@ -1,10 +1,10 @@
 <div class="topnav shadow p-1">
 
-    <!-- <img src=""  alt="Chaudhari Yatra"> -->
 
-    <img  routerLink="" src="https://scontent.fpnq7-5.fna.fbcdn.net/v/t1.18169-9/12239473_945903652129898_9100757340436412921_n.jpg?stp=cp0_dst-jpg_e15_p100x100_q65&_nc_cat=107&ccb=1-7&_nc_sid=dd9801&_nc_ohc=t4Me6uAuYaMAX-DxXYj&_nc_ht=scontent.fpnq7-5.fna&oh=00_AfAcljYwsx3fK1c_j0KWBYQZPriFPjguWlJ8VF0a4H6qdA&oe=64576544" alt="" srcset=""  >
+    <img routerLink=""
+        src="https://scontent.fpnq7-5.fna.fbcdn.net/v/t1.18169-9/12239473_945903652129898_9100757340436412921_n.jpg?stp=cp0_dst-jpg_e15_p100x100_q65&_nc_cat=107&ccb=1-7&_nc_sid=dd9801&_nc_ohc=t4Me6uAuYaMAX-DxXYj&_nc_ht=scontent.fpnq7-5.fna&oh=00_AfAcljYwsx3fK1c_j0KWBYQZPriFPjguWlJ8VF0a4H6qdA&oe=64576544"
+        alt="" srcset="">
 
-    <!-- <a routerLink="" style="text-decoration: none;"><b>Demo Company name</b></a> -->
 
     <span class="menu" (click)="openNav(false)"><i class="bi bi-list"></i></span>
 
@@ -23,30 +23,19 @@
         <li><a routerLink="/admin/reports" routerLinkActive="active"><i class="bi bi-card-text"></i> <b
                     [hidden]="hideanchor == true">Reports</b></a></li>
 
-        <!-- <li>
-            <a routerLink=""><i class="bi bi-bag"></i> Products <i class="bi bi-arrow-right icon"></i></a>
-
-            <ul class="dropdow-container">
-
-                <li><a href="#">Link1</a></li>
-
-                <li><a href="#">Link2</a></li>
-
-            </ul> -->
-
-        <!-- </li> -->
 
         <li><a routerLink="/admin/userdetail" routerLinkActive="active"><i class="bi-person-plus"></i> <b
                     [hidden]="hideanchor == true">User Details</b> </a></li>
 
         <li><a routerLink="/admin/users" routerLinkActive="active"><i class="bi-card-list"></i> <b
                     [hidden]="hideanchor == true">User</b></a></li>
-        
+
 
         <li><a routerLink="/admin/edetails" routerLinkActive="active"><i class="bi-person"></i><b
-                    [hidden]="hideanchor == true">Employee Details</b></a></li>    
-    
-        <li (click)="logout()"><a href="#"><i class="bi bi-box-arrow-left"></i> <b [hidden]="hideanchor == true">Logout</b></a></li>
+                    [hidden]="hideanchor == true">Employee Details</b></a></li>
+
+        <li (click)="logout()"><a href="#"><i class="bi bi-box-arrow-left"></i> <b
+                    [hidden]="hideanchor == true">Logout</b></a></li>
 
     </ul>
 

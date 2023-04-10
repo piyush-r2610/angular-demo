@@ -18,6 +18,8 @@ export class EmployeeDetailsComponent implements OnInit {
       this.employees=[];
       this.employeesToDisplay=this.employees;
   }
+
+  
   ngOnInit(): void {
   
     this.employeeService.getEmployee().subscribe((res) => {
@@ -28,6 +30,7 @@ export class EmployeeDetailsComponent implements OnInit {
     });
 
   }
+
   deleteEmployee(event:any){
       // console.log(event);
       this.employeeService.deleteEmployee(event).subscribe((result) =>

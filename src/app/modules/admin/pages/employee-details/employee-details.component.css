@@ -91,6 +91,7 @@ td {
   border: transparent;
 }
 
+
 /* Responsive styles */
 @media screen and (min-width: 920px) {
   table thead {
