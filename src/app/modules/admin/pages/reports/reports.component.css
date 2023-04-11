@@ -5,7 +5,7 @@ button{
 }
 .card{
     /* margin-top:100px; */
-    /* margin-left: 40px; */
+    margin-left: 20px;
     box-shadow: 0px 4px 20px rgba(5,57,94,.5);
     -moz-box-shadow:0px 4px 20px rgba(5,57,94,.5);
     -webkit-box-shadow:0px 4px 20px rgba(5,57,94,.5);
@@ -22,6 +22,6 @@ button{
 @media screen and (min-width : 767px){
 
     .card{
-        margin-left: 60px;
+        margin-left: 80px;
     }
 }

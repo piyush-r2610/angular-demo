@@ -1,15 +1,22 @@
 .card {
 
-    margin-left: 50px;
+    margin-left: 40px;
     box-shadow: 0px 4px 20px rgba(5,57,94,.5);
 }
 
 .btn-group{
     padding-top: 10px;
-    padding-right: 0px;
-    
+ 
+}
+
+.btn-success{
+    margin-left: 2px;
 }
 
 .form-row{
     padding-top: 10px;
+}
+
+@media screen and (min-width : 800px){
+    
 }

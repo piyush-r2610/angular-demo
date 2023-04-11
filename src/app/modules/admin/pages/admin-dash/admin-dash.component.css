@@ -11,7 +11,8 @@
     z-index: 10;
 }
 img{
-
+    margin-left: 10px;
+    /* height: 50px; */
     width: 150px;
 
 }
@@ -49,10 +50,11 @@ img{
 }
 .sidebar a:hover {
 
-    color: green;
+    color: orange;
     border-radius: 10px;
   }
 .sidebar a {
+    margin-top: 2px;
     text-decoration: none;
     padding: 10px 10px;
     color: white;
@@ -90,7 +92,7 @@ ul{
 
 }
 ul>li>a.active{
-    color: green;
+    color: black;
     background-color: white;
     border-radius: 10px;
 

@@ -41,10 +41,11 @@ export class AdminDashComponent implements OnInit {
       this.responsiveMenu = {
         'display':'block',
         'width':'60px',
+      
         // 'text-align': 'center'
       }
       this.responsiveContent={
-        'margin-left':'30px',
+        'margin-left':'60px',
         'margin-top':'60px'
       }
       this.defaultStatus = true;

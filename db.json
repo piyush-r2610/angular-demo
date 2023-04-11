@@ -10,17 +10,6 @@
       "jobExperience": 0,
       "salary": 0,
       "id": 1
-    },
-    {
-      "firstname": "zebra",
-      "lastname": "don",
-      "birthdate": "2023-04-18T18:30:00.000Z",
-      "gender": "m",
-      "education": "Post Graduate",
-      "company": "apple",
-      "jobExperience": 0,
-      "salary": 29,
-      "id": 2
     }
   ],
   "comments": [],
